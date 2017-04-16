@@ -1,8 +1,8 @@
-#Dash TipBot For Slack
+#Vericoin TipBot For Slack
 Easily transfer money between team members on your Slack channel.
 
 ## Basic features
- - With a single message, send and receive Dash
+ - With a single message, send and receive Vericoin
  - A tip has no transaction fee. There are no extra cost added to your tip.
  - Get the fiat prices.
 
@@ -64,10 +64,10 @@ eg; `hey @tipbot can you show me the help info!`
 eg; `hey @tipbot can you please tell me my balance`
 
 ##### `send <value + unit> @someone` - *tell the bot to send coins to someone*
-eg; `@tipbot please send .001 Dash to @bob` will send 0.001 Dash to @bob.
+eg; `@tipbot please send .001 Vericoin to @bob` will send 0.001 Vericoin to @bob.
 
 This command has a few aliases which you can use; `give` and `sent`. 
-You can also use fiat currencies, they will be converted to the Dash value.
+You can also use fiat currencies, they will be converted to the Vericoin value.
 eg; `@tipbot can you give @bob 1 euro` or `@tipbot I'd like you to send @bob 0.5 usd`
 
 ##### `deposit`     - *ask the bot for a deposit address*
@@ -75,19 +75,19 @@ eg; `@tipbot I'd like to deposit to my tip jar`
 
 ##### `withdraw`    -  *tell the bot you want to withdraw to an address*
 after you've requested the withdraw the bot will confirm with you if it's OK, replying with `yes`, `ok` or `sure` will make the transaction happen.
-eg; `@tipbot I want to withdraw 0.5 Dash to 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp`
+eg; `@tipbot I want to withdraw 0.5 Vericoin to 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp`
 
 ##### `currencies` - ask the bot for a list of supported currencies. 
 eg; `_@tipbot what currencies do you know?`
 
-##### `price`      - ask the bot for the Dash price in a particular currency. 
+##### `price`      - ask the bot for the Vericoin price in a particular currency.
 eg; `_@tipbot price in USD!` 
 
-##### `convert`    - ask the bot to convert between a particular currency and Dash (or visa versa)
-eg; `@tipbot 1 USD to EUR!_​  or; ​_@tipbot 0.03 DASH to GBP`
+##### `convert`    - ask the bot to convert between a particular currency and Vericoin (or visa versa)
+eg; `@tipbot 1 USD to EUR!_​  or; ​_@tipbot 0.03 VRC to GBP`
 
 ##### `sun`       - check the available sunshine. 
-Each user that has tipped another user will receive a _sunray_ (read: free Dash) from the sun fund.
+Each user that has tipped another user will receive a _sunray_ (read: free Vericoin) from the sun fund.
 
 ##### `quiz add`   - The bot will ask to input a new quiz question and answer.
 Each question needs to be reviewed by a moderator.
@@ -101,14 +101,14 @@ Each question needs to be reviewed by a moderator.
 ##### `balance all`      show all the tip jars (must be enabled in code)
 
 ##### `balance check`    show the balance of a specific user (must be enabled in code) 
-eg;        `dashbot balance check @user` 
+eg;        `veribot balance check @user`
 
 
-##### `whisper`         Send a message in a private channel to a user as dashbot.
+##### `whisper`         Send a message in a private channel to a user as veribot.
 Use case :moderator warning.
 
 
-##### `sun threshold`  Set the threshold on where the balance of the sun account will be distributed between all the users that tipped. Defaults to 5 Dash.
+##### `sun threshold`  Set the threshold on where the balance of the sun account will be distributed between all the users that tipped. Defaults to 5 Vericoin.
 
 ##### `sun eligible`  See which users are eligible for a sunray.
 
@@ -121,7 +121,7 @@ Use case :moderator warning.
 
 ##### `quiz delete _question number_`   Delete a question.
 
-##### `quiz reward _question number_`   Set/change reward for a question (also approves the question). @dashbot will ask amount.
+##### `quiz reward _question number_`   Set/change reward for a question (also approves the question). @veribot will ask amount.
 
 ##### `quiz star`    Start a quiz.
 
