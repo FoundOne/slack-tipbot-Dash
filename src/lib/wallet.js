@@ -7,7 +7,7 @@ let dashd = require('bitcoin')
 let helpText = require('../text/txt_dash.js').userTxt
 let Coin = require('./coin')
 
-const BLOCKCHAIN_EXPLORER_URL = 'https://chainz.cryptoid.info/dash/tx.dws?'
+const BLOCKCHAIN_EXPLORER_URL = 'https://chainz.cryptoid.info/vrc/tx.dws?'
 
 const REQUIRED_WITHDRAW_CONFIRMATIONS = 6
 const REQUIRED_TIP_CONFIRMATIONS = 5 // to immediately be able to send a tip after deposit with InstantSend

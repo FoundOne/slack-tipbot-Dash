@@ -1,7 +1,7 @@
 {
   "name": "slack-tipbot-node",
   "version": "2.1.4",
-  "description": "Dash Slack TipBot - Using local wallet",
+  "description": "Vericoin Slack TipBot - Using local wallet",
   "main": "bot.js",
   "dependencies": {
     "async": "^2.1.0",
@@ -29,25 +29,23 @@
   },
   "scripts": {
     "test": "snyk test",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect",
     "lint": "eslint ./src/**/*.js --fix",
     "compile": "gulp lint && gulp babel"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/narubyriverlione/slack-tipbot"
+    "url": "https://github.com/FoundOne/slack-tipbot-Vericoin"
   },
   "keywords": [
     "slack",
     "slackbot",
     "tipbot",
-    "dash"
+    "vericoin"
   ],
-  "author": "Naruby Riverlione <naruby.riverlione@gmail.com",
+  "authors": "Naruby Riverlione <naruby.riverlione@gmail.com , Nayden Pendov <darkey@protonmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/NarubyRiverlione/slack-tipbot-Dash/issues"
   },
-  "snyk": true
+  "snyk": false
 }

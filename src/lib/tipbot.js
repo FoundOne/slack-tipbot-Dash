@@ -20,7 +20,7 @@ let TipBot = function (bot, RPC_USER, RPC_PASSWORD, RPC_PORT, OPTIONS) {
   if (!bot) { throw new Error('Connection with Slack not availible for tipbot') }
 
   const HighBalanceWarningMark = Coin.toSmall(1.0)
-  self.CYBERCURRENCY = 'DASH'  // upper case for compare
+  self.CYBERCURRENCY = 'VRC'  // upper case for compare
   const BLACKLIST_CURRENCIES = [self.CYBERCURRENCY]
 
   self.initializing = false
@@ -231,7 +231,7 @@ TipBot.prototype._getPriceRates = function (filename, cb) {
         cb(null, JSON.parse(data))
       })
     } else {
-      request.get('http://coinmarketcap-nexuist.rhcloud.com/api/dash/price', function (err, response, body) {
+      request.get('http://coinmarketcap-nexuist.rhcloud.com/api/vrc/price', function (err, response, body) {
         fs.writeFile(filename, body, function (err) {
           if (err) {
             return cb(err)
