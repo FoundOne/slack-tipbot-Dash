@@ -42,7 +42,8 @@
     "tipbot",
     "vericoin"
   ],
-  "authors": "Naruby Riverlione <naruby.riverlione@gmail.com , Nayden Pendov <darkey@protonmail.com>",
+  "author": "Naruby Riverlione <naruby.riverlione@gmail.com",
+  "contributors": ["Nayden Pendov <darkey@protonmail.com>"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/NarubyRiverlione/slack-tipbot-Dash/issues"
