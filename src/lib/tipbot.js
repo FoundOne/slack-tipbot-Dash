@@ -227,8 +227,14 @@ TipBot.prototype._getPriceRates = function (filename, cb) {
         if (err) {
           return cb(err)
         }
-
-        cb(null, JSON.parse(data))
+        let data_content
+        try {
+            data_content =JSON.parse(data)
+        }
+        catch(e) {
+            data_content = Object
+        }
+        cb(null, data_content)
       })
     } else {
       request.get('http://coinmarketcap-nexuist.rhcloud.com/api/vrc/price', function (err, response, body) {
@@ -236,8 +242,14 @@ TipBot.prototype._getPriceRates = function (filename, cb) {
           if (err) {
             return cb(err)
           }
-
-          cb(null, JSON.parse(body))
+          let body_content
+          try {
+            body_content =JSON.parse(body)
+          }
+          catch(e) {
+            body_content = Object
+           }
+          cb(null, body_content)
         })
       })
     }
