@@ -40,6 +40,11 @@ const tipbotTxt = {
     // 'help_convert':
     '*convert*\t\task the bot to convert between a particular currency and Vericoin (or visa versa).\n' +
     '\t\t_@VeriBot 0.03 VRC to GBP_ \t or \t _@VeriBot 15 EURO to VRC_\n',
+
+    // Credits
+    'If you like the bot you can tip _@darkey_ at _Vericoin and Verium_ slack room\n' +
+    'who made the bot to work with _Vericoin_\n' +
+    'or you can buy him a coffee by sending money to _VMbLH5BnnqGZwF5mDakCybYmucZikQ5FLt_\n',
   ],
 
   'help_rain':
