@@ -642,7 +642,7 @@ TipBot.prototype.sendPrivateRainMessage = function (oneUser, rainSize) {
         .then(DMchannelRecievingUser => {
           const recievingUserMessage = {
             'channel': DMchannelRecievingUser,
-            'text': tipbotTxt.RainRecieved + Coin.toLarge(rainSize) + ' dash'
+            'text': tipbotTxt.RainRecieved + Coin.toLarge(rainSize) + ' VRC'
           }
           // wait the time set via rain Throttle to prevent slack spam protection
           setTimeout(() => {
@@ -673,6 +673,7 @@ TipBot.prototype.onMessage = function (channel, member, message) {
     return
   }
 
+  debug('DEBUG: message received')
   self.getDirectMessageChannelID(channel, user.id)
     .then(DMchannelID => {
       const ProcessMessage = require('./processMessage.js')

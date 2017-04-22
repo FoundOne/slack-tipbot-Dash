@@ -195,7 +195,7 @@ module.exports = class Wallet {
                   return reject(error)
                 }
                 if (result === true) {
-                  debug('Sending Tip: Moved ' + Coin.toLarge(value) + ' Dash from ' + user.handle + ' to ' + sendToUser.name + '(' + sendToUser.id + ')')
+                  debug('Sending Tip: Moved ' + Coin.toLarge(value) + ' Vericoin from ' + user.handle + ' to ' + sendToUser.name + '(' + sendToUser.id + ')')
                   // prepare message in channel where Tip command was issued
                   let responses = {
                     public: helpText.SendPublicMessage1 + user.handle + helpText.SendPublicMessage2 + sendToUser.handle
