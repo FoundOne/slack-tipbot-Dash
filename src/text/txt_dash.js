@@ -23,7 +23,7 @@ const tipbotTxt = {
     // 'help_withdraw':
     '*withdraw*\ttell the bot to withdraw an amount to an address. \n' +
     '\t\t\t\t\tYou can also use _all_ to withdraw your complete balance (minus the tx fee) \n' +
-    '\t\t_@VeriBot withdraw 1 VRC to XqyTXt9LM3AHdrfG8ckdTatDiwk5514a11_',
+    '\t\t_@VeriBot withdraw 1 VRC to VPyMFyNhLABUAeNSPtFPqdmT1KDdgrHECG_',
 
     // 'help_currencies':
     '*currencies*\task the bot for a list of supported currencies.\n' +
@@ -50,7 +50,7 @@ const tipbotTxt = {
   '*autowithdraw*\tCheck you autowithdraw setup. \n' +
   '\t\t\tWhen you tip jar exide the set amount then there is an automatic withdraw to the set address.\n' +
   '*autowithdraw* amount address\tSet amount and address.\n' +
-  '\t\t_@VeriBot autowithdraw 0.5 VRC XqyTXt9LM3AHdrfG8ckdTatDiwk5514a11',
+  '\t\t_@VeriBot autowithdraw 0.5 VRC VPyMFyNhLABUAeNSPtFPqdmT1KDdgrHECG',
 
   'helpAdminOnly':
   '===== *ADMIN ONLY COMMANDS* =====\n' +

@@ -61,7 +61,7 @@ let TipBot = function (bot, RPC_USER, RPC_PASSWORD, RPC_PORT, OPTIONS) {
   self.AMOUNT_REGEX = new RegExp('\\s(\\d+\\.\\d{1,8}|\\.\\d{1,8}|\\d+)(?:\\s|$)')
   self.AMOUNT_OR_ALL_REGEX = new RegExp('\\s(\\d+\\.\\d{1,8}|\\.\\d{1,8}|\\d+|all)(?:\\s|$)')
 
-  self.ADDRESS_REGEX = new RegExp('[X|y][a-zA-Z0-9]{25,36}', 'g')
+  self.ADDRESS_REGEX = new RegExp('V[a-zA-Z0-9]{25,36}', 'g')
 
   self.DUMMY_USERS_REGEX = new RegExp('.*[.]$', 'ig')
 
