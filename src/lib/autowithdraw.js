@@ -27,7 +27,7 @@ function ShowSetup(user) {
           line += '\n\n'
           // amount
           line += autoWithdrawTxt.setup_1 +
-            (options.amount ? options.amount + ' dash'
+            (options.amount ? options.amount + ' vrc'
               : autoWithdrawTxt.notSet)
           // address
           line += '\n' + autoWithdrawTxt.setup_2 +

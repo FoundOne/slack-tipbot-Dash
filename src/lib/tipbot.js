@@ -481,7 +481,7 @@ TipBot.prototype.normalizeValue = function (inputValue, unit, user, outputCurren
           currency = self.CYBERCURRENCY
           value = Coin.toSmall(inputValue)
         }
-        if (unit.match(/DASH/i)) {
+        if (unit.match(/VRC|Vericoin/i)) {
           currency = self.CYBERCURRENCY
           value = parseFloat(inputValue)
         }

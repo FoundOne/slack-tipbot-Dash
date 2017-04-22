@@ -52,7 +52,7 @@ module.exports = class Rain {
 
           .then(threshold => {
             replyTxt += '\n' + helpTexts.RainThreshold1 +
-              Coin.toLarge(threshold) + ' Dash \n' +
+              Coin.toLarge(threshold) + ' Vericoin \n' +
               helpTexts.RainThreshold2
             // show amount of eligible users
             return this.GetAmountOfEligibleRainUsers()
