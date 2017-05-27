@@ -110,6 +110,7 @@ module.exports = class Wallet {
   Withdraw(value, toAddress, walletPass, user) {
     // substract tx fee from amount
     const withdrawAmount = value - this.TX_FEE
+    console.log("DEBUG: val=" + value + " fee=" + this.TX_FEE);
 
     return new Promise(
       (resolve, reject) => {
@@ -262,7 +263,8 @@ function unlockWalletIfNeeded(walletDaemon, walletPass) {
   return new Promise(
     (resolve, reject) => {
       // no password supplied = no unlocking needed
-      if (!walletPass) resolve()
+      if (walletPass === null) return resolve()
+      console.log(walletPass);
       walletDaemon.walletPassphrase(walletPass, 10,
         err => {
           if (err) {

@@ -465,10 +465,11 @@ TipBot.prototype.normalizeValue = function (inputValue, unit, user, outputCurren
         self.wallet.GetBalance(user.id, 6)
           .then(balance => {
             let value = Coin.toSmall(balance)
+            debug("val=" + value);
             debug('Log: using ALL balance of ' + user.name + ' = ' + balance)
             // amount is in cybercoin, return only value, no convertion rate
             const converted = { newValue: value, rate: null, text: Coin.toLarge(value) + ' ' + self.CYBERCURRENCY }
-            resolve(converted)
+            return resolve(converted)
           })
           .catch(err => {
             debug(err)
@@ -482,6 +483,7 @@ TipBot.prototype.normalizeValue = function (inputValue, unit, user, outputCurren
           value = Coin.toSmall(inputValue)
         }
         if (unit.match(/VRC|Vericoin/i)) {
+          debug("The currency is VRC!")
           currency = self.CYBERCURRENCY
           value = parseFloat(inputValue)
         }
@@ -495,7 +497,7 @@ TipBot.prototype.normalizeValue = function (inputValue, unit, user, outputCurren
         if (currency === self.CYBERCURRENCY.toLowerCase()) {
           if (!outputCurrency) {
             // amount is in cybercoin, return only value, no convertion rate
-            const converted = { newValue: value, rate: null, text: Coin.toLarge(value) + ' ' + self.CYBERCURRENCY }
+            const converted = { newValue: Coin.toSmall(value), rate: null, text: value + ' ' + self.CYBERCURRENCY }
             return resolve(converted)
           } else {
             // outputCurrency is know =>  convert cybercoin -> fiat

@@ -271,6 +271,7 @@ module.exports = function (message, channel, user, DMchannelID, tipbot) {
     // convert amount if currency isn't Dash
     tipbot.normalizeValue(amount[1], amount[2], user)
       .then(converted => {
+        debug("Converted: " + Coin.toSmall(converted));
         // ask for confirmation (needed if doing a conversion: withdraw x euro)
         let privateConversation = { user: user.id }
         tipbot.slack.startPrivateConversation(privateConversation, function (err, convo) {
@@ -285,7 +286,7 @@ module.exports = function (message, channel, user, DMchannelID, tipbot) {
                   convo.say('Great! I will continue...')
                   convo.next()
                   // do something else...
-                  tipbot.wallet.Withdraw(Coin.toSmall(converted.newValue), address[0], tipbot.OPTIONS.WALLET_PASSW, user)
+                  tipbot.wallet.Withdraw(converted.newValue, address[0], tipbot.OPTIONS.WALLET_PASSW, user)
                     .then(response => {
                       debug(user.name + ' has succesfull withdraw ' + converted.newValue + ' to ' + address[0])
                       convo.say(response)
