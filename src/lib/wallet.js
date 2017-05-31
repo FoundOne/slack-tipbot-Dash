@@ -187,11 +187,11 @@ module.exports = class Wallet {
               return reject(error)
             }
             // use a in wallet transfer
-            this.walletDaemon.move(user.id, sendToUser.id, parseFloat(Coin.toLarge(value)),
+            this.walletDaemon.move(user.id, sendToUser.id, parseFloat(value),
               (err, result) => {
                 if (err) {
                   debug('ERROR: moving between account (' + user.id + ') to acount (' + sendToUser.id + ')' + err)
-                  error = helpText.SendOops1 + Coin.toLarge(value) + ' ' + helpText.BaseCurrency + helpText.SendOops2 + sendToUser.name + ''
+                  error = helpText.SendOops1 + value + ' ' + helpText.BaseCurrency + helpText.SendOops2 + sendToUser.name + ''
                   user.locked = false //  this transaction is done, clear lock to allow new transactions
                   return reject(error)
                 }
@@ -203,7 +203,7 @@ module.exports = class Wallet {
                   }
                   //  prepare message to recieving user to inform of tip
                   responses.privateToReciever = helpText.SendPrivateMssRecievingUser1 + sendToUser.handle +
-                    helpText.SendPrivateMssRecievingUser2 + Coin.toLarge(value) + ' ' +
+                    helpText.SendPrivateMssRecievingUser2 + value + ' ' +
                     helpText.BaseCurrency + helpText.SendPrivateMssRecievingUser3 + user.handle + ' !'
                   // prepare message to sending user to inform of new balance
                   this.GetBalanceLine(user)
